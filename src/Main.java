@@ -1,9 +1,10 @@
 //o ty huju bobże
 import  java.util.*;
 public class Main {
-    Scanner scanner = new Scanner(System.in);
+
     color Color = new color();
     save S = new save();
+    player Player = new player();
 
     public static void main(String[] args) {
         Main m = new Main();
@@ -18,11 +19,12 @@ public class Main {
             S.canSave = false;
             System.out.println(Color.RED+"UWAŻAJ! twój system nie jest wspierany. Możesz grać ale system zapisywania nie będzie działał");
         }
-
+        System.out.print(Color.BLUE + "witaj w JUAMP-J\n");
+        System.out.println(Color.BLUE + "Utwóż swoją postać"+Color.RESET);
+        Player.conf_player(S);
 
         while(true){
-            String nameSurname = scanner.nextLine();
-            System.out.println(nameSurname);
+
 
         }
     }
@@ -35,6 +37,20 @@ class color{
     final String YELLOW = "\u001B[33m";
     final String BLUE = "\u001B[34m";
 }
-class better_io{
+class betterIo {
+    color C = new color();
+    Scanner scanner = new Scanner(System.in);
+    public String input(){
+        return scanner.nextLine();
+    }
+    public void output(String in){
+        System.out.println(in);
+    }
+    public void outputErr(String in) {
+        System.out.println(C.RED + in + C.RESET);
+    }
+    public void outputGame(String in){
+        System.out.println(C.BLUE + in + C.RESET);
+    }
 
 }
