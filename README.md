@@ -5,6 +5,8 @@ JUAMP ale w java. LUBISZ BUGI? JA TEŻ!!!!!!! DLA TEGO JUAMP-J JEST DLA CIEBIE S
 * związki
 * można być dyktatorem
 * można być napadniętym przez sebixa
+* można wjebać sebixowi jak ma się wystarczający atrybut siły
+
   
 (te funkcje nie są jeszcze wprowadzone)
 # inspiracja
