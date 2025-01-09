@@ -11,3 +11,5 @@ JUAMP ale w java. LUBISZ BUGI? JA TEŻ!!!!!!! DLA TEGO JUAMP-J JEST DLA CIEBIE S
 (te funkcje nie są jeszcze wprowadzone)
 # inspiracja
 [JUAMP](https://github.com/gorciu-official/JUAMP)
+# Wsparcie
+techniczne każdy system operacyjny który ma Javę ale w pełni wspierany jest Linux i Windows planowane jest wsparcie dla Maca
