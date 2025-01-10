@@ -11,4 +11,13 @@ public class save {
     public void load(){
 
     }
+    void saveStats(){
+
+    }
+    void loadStats(){
+
+    }
+    public void doesSaveExist(){
+
+    }
 }

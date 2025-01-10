@@ -18,6 +18,7 @@ public class Main {
         }else{
             S.canSave = false;
             System.out.println(Color.RED+"UWAŻAJ! twój system nie jest wspierany. Możesz grać ale system zapisywania nie będzie działał");
+
         }
         System.out.print(Color.BLUE + "witaj w JUAMP-J\n");
         System.out.println(Color.BLUE + "Utwóż swoją postać"+Color.RESET);
