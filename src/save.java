@@ -4,10 +4,10 @@ public class save {
     String path;
     public String OS;
     public boolean canSave = true;
-    String savePath;
-    Path filePath = Paths.get("example.txt");
+    String savePath = System.getProperty("user.home") + "/juamp-j/save.txt";
+    Path filePath = Paths.get(savePath);
     public void create(){
-        savePath =
+
     }
     public void Save(){
 
