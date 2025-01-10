@@ -11,4 +11,7 @@ public class save {
     public void load(){
 
     }
+    public void doesSaveExist(){
+
+    }
 }
