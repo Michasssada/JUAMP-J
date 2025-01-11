@@ -15,14 +15,19 @@ public class Main {
             S.OS = "win";
         }else if (System.getProperty("os.name").toLowerCase().contains("linux")){
             S.OS = "lin";
-        }else{
-            S.canSave = false;
-            System.out.println(Color.RED+"UWAŻAJ! twój system nie jest wspierany. Możesz grać ale system zapisywania nie będzie działał");
-
+        }
+        else if (System.getProperty("os.name").toLowerCase().contains("mac")){
+            S.OS = "mac";
         }
         System.out.print(Color.BLUE + "witaj w JUAMP-J\n");
-        System.out.println(Color.BLUE + "Utwóż swoją postać"+Color.RESET);
-        Player.conf_player(S);
+        if(S.doesSaveExist()){
+            S.load();
+        }
+        else {
+            System.out.println(Color.BLUE + "Utwóż swoją postać"+Color.RESET);
+            Player.conf_player(S);
+        }
+
 
         while(true){
 

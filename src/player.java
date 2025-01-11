@@ -1,5 +1,4 @@
 import java.util.Random;
-
 public class player {
     betterIo io = new betterIo();
     Random random = new Random();
@@ -17,36 +16,29 @@ public class player {
         gender();
         io.outputGame("twożenie save");
         S.create();
-        genStartStats();
-        System.out.print("charisma:"+charisma+"force:"+force);
+        generateRandomStats();
 
 
     }
     void gender(){
-        io.outputGame("wybież płeć postaci (b = chłopak g = dziewczyna, jeśli chcesz się dowiedzieć więcej = info)");
+        io.outputGame("wybież płeć postaci (b = chłopak g = dziewczyna)");
         String genderBuffer = io.input();
         if(genderBuffer.equals("b")){
             gender = false;
         }else if (genderBuffer.equals("g")){
             gender = true;
-        }else if(genderBuffer.equals("info")){
-            io.outputGame("chłopak: większa szansa zostania pobitym przez sebixa. większa siła początkowa");
-            io.outputGame("dziewczyna: mniejsza szansa zostania pobitym przez sebixa. mniejsza siła początkowa");
-            gender();
-        }
-        else{
+        }else {
             io.outputErr("ups chyba źle wprowadziłeś");
             gender();
         }
     }
-    void genStartStats(){
-        charisma = random.nextFloat(5);
-        if (gender)
-            force = Math.round(random.nextFloat(3));
-        else {
-            force = Math.round(random.nextFloat(6));
+    void generateRandomStats(){
+        charisma = Math.round(random.nextFloat(6));
+        if(gender){
+            force= Math.round(random.nextFloat(4));
+        }else {
+            force= Math.round(random.nextFloat(6));
         }
-
     }
 
 }
