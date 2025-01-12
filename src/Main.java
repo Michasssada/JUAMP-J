@@ -11,17 +11,9 @@ public class Main {
         m.rMain();
     }
     public void rMain(){//real main
-        if(System.getProperty("os.name").toLowerCase().contains("win")){
-            S.OS = "win";
-        }else if (System.getProperty("os.name").toLowerCase().contains("linux")){
-            S.OS = "lin";
-        }else{
-            S.canSave = false;
-            System.out.println(Color.RED+"UWAŻAJ! twój system nie jest wspierany. Możesz grać ale system zapisywania nie będzie działał");
-        }
         System.out.print(Color.BLUE + "witaj w JUAMP-J\n");
-        System.out.println(Color.BLUE + "Utwóż swoją postać"+Color.RESET);
-        Player.conf_player(S);
+        System.out.print(Color.BLUE + "Utwóż swoją postać"+Color.RESET);
+        Player.conf_player(S, Player);
 
         while(true){
 

@@ -6,8 +6,12 @@ public class save {
     public boolean canSave = true;
     String savePath = System.getProperty("user.home") + "/juamp-j/save.txt";
     Path filePath = Paths.get(savePath);
-    public void create(){
+    player p;
+    public void create(player pObj){
+        p = pObj;
+        if (doesSaveExist()){
 
+        }
     }
     public void Save(){
 
@@ -16,8 +20,13 @@ public class save {
 
     }
     public boolean doesSaveExist(){
+        if (Files.exists(filePath)){
+            return true;
+        }
+        else {
+            return false;
+        }
 
-        return true;
     }
     void saveStats(){
 

@@ -9,14 +9,15 @@ public class player {
     public float politicalReputation = 0;
     public float money = 1000;
     public float force;
-    public void conf_player(save S){
+    public void conf_player(save S, player playerObj){
         io.outputGame("jak chcesz aby twoja postać miała na imie");
         name = io.input();
         io.outputGame("okej twoja postać ma na imię:" + name);
         gender();
-        io.outputGame("twożenie save");
-        S.create();
         generateRandomStats();
+        io.outputGame("twoje staty, charyzma: "+charisma+"siła: "+force);
+        io.outputGame("twożenie save");
+        S.create(playerObj);
 
 
     }
