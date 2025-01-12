@@ -1,19 +1,19 @@
 import java.io.File;
 import java.nio.file.*;
-
+import java.nio.file.Files;
 public class save {
     String path;
     public String OS;
     public boolean canSave = true;
-    String savePath = System.getProperty("user.home") + "/juamp-j/save.txt";
+    String savePath = System.getProperty("user.home") + "/j-save/save.txt";
     Path filePath = Path.of(savePath);
-    File file = new File(savePath);
     player p;
     public void create(player pObj){
         p = pObj;
         if (doesSaveExist()){
             try {
-                file.createNewFile();
+                Files.createDirectories(filePath.getParent());
+                Files.createFile(filePath);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
