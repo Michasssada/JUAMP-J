@@ -4,15 +4,14 @@ public class Main {
 
     color Color = new color();
     save S = new save();
-    player Player;
-    betterIo io = new betterIo(Player);
+    player Player = new player();
+    betterIo io = new betterIo();
 
     public static void main(String[] args) {
         Main m = new Main();
         m.rMain();
     }
     public void rMain(){//real main
-        Player = new player(io);
         if (S.doesSaveExist()){
             System.out.print(Color.BLUE + "witaj w JUAMP-J\n");
             System.out.print(Color.BLUE + "Utwóż swoją postać\n"+Color.RESET);
@@ -37,9 +36,6 @@ class betterIo {
     color C = new color();
     Scanner scanner = new Scanner(System.in);
     player P;
-    public betterIo(player P){
-        this.P = P;
-    }
     public String input(){
         return scanner.nextLine();
     }
@@ -53,11 +49,7 @@ class betterIo {
         System.out.println(C.BLUE + in + C.RESET);
     }
     public void outputPlayer(String in){
-        if(P.gender){
-            System.out.println(C.PINK + in + C.RESET);
-        }else {
-            System.out.println(C.GREEN + in + C.RESET);
-        }
+
     }
 
 }

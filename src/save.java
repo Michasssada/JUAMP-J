@@ -1,6 +1,7 @@
 import java.io.File;
 import java.nio.file.*;
 import java.nio.file.Files;
+import java.io.IOException;
 public class save {
     String path;
     public String OS;
@@ -18,6 +19,7 @@ public class save {
                 throw new RuntimeException(e);
             }
         }
+        saveStats();
     }
     public void Save(){
 
@@ -30,7 +32,12 @@ public class save {
 
     }
     void saveStats(){
-
+        //first line is name second is gender third is force fourth is charisma
+        try {
+            Files.writeString(filePath,p.name);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
     void loadStats(){
 

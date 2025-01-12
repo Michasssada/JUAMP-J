@@ -1,7 +1,7 @@
 import java.util.Random;
 public class player {
 
-    betterIo io;
+    betterIo io = new betterIo();
     Random random = new Random();
     public String name;
     public boolean gender; //false to chłopak
@@ -10,9 +10,7 @@ public class player {
     public float politicalReputation = 0;
     public float money = 1000;
     public float force;
-    public player(betterIo io){
-        this.io = io;
-    }
+
     public void conf_player(save S, player playerObj){
         io.outputGame("jak chcesz aby twoja postać miała na imie");
         name = io.input();
