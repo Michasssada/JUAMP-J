@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a63f4791-f284-457b-9516-1d492511506e" name="Changes" comment="creates save file">
+    <list default="true" id="a63f4791-f284-457b-9516-1d492511506e" name="Changes" comment="saves name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/save.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736698667067</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="saves name">
+      <option name="closed" value="true" />
+      <created>1736699546042</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736699546042</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -132,6 +139,7 @@
     <MESSAGE value="tak" />
     <MESSAGE value="save and player stats" />
     <MESSAGE value="creates save file" />
-    <option name="LAST_COMMIT_MESSAGE" value="creates save file" />
+    <MESSAGE value="saves name" />
+    <option name="LAST_COMMIT_MESSAGE" value="saves name" />
   </component>
 </project>

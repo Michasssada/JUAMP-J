@@ -1,4 +1,5 @@
 //o ty huju bobże
+import java.nio.file.StandardOpenOption;
 import  java.util.*;
 public class Main {
 
@@ -13,7 +14,7 @@ public class Main {
     }
     public void rMain(){//real main
         if (S.doesSaveExist()){
-            System.out.print(Color.BLUE + "witaj w JUAMP-J\n");
+            System.out.print(Color.BLUE + "witaj w JUAMP-J");
             System.out.print(Color.BLUE + "Utwóż swoją postać\n"+Color.RESET);
             Player.conf_player(S, Player);
         }

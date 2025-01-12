@@ -34,7 +34,8 @@ public class save {
     void saveStats(){
         //first line is name second is gender third is force fourth is charisma
         try {
-            Files.writeString(filePath,p.name);
+            Files.writeString(filePath,p.name+"\n");
+            Files.writeString(filePath,String.valueOf(p.gender), StandardOpenOption.APPEND);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
