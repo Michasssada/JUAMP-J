@@ -1,3 +1,4 @@
+import java.io.File;
 import java.nio.file.*;
 
 public class save {
@@ -5,12 +6,17 @@ public class save {
     public String OS;
     public boolean canSave = true;
     String savePath = System.getProperty("user.home") + "/juamp-j/save.txt";
-    Path filePath = Paths.get(savePath);
+    Path filePath = Path.of(savePath);
+    File file = new File(savePath);
     player p;
     public void create(player pObj){
         p = pObj;
         if (doesSaveExist()){
-
+            try {
+                file.createNewFile();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
     }
     public void Save(){
@@ -20,12 +26,7 @@ public class save {
 
     }
     public boolean doesSaveExist(){
-        if (Files.exists(filePath)){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return !Files.exists(filePath);
 
     }
     void saveStats(){
