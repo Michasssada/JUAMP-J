@@ -38,9 +38,9 @@ public class player {
     void generateRandomStats(){
         charisma = Math.round(random.nextFloat(6));
         if(gender){
-            force= Math.round(random.nextFloat(4));
+            force= Math.round(random.nextFloat(1,4));
         }else {
-            force= Math.round(random.nextFloat(6));
+            force= Math.round(random.nextFloat(1,6));
         }
     }
 
