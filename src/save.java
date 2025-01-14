@@ -24,14 +24,16 @@ public class save {
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
+            Save();
+
         }
-        saveStats();
+
     }
     public void Save(){
-
+        saveStats();
     }
-    public void load(){
-
+    public void load() throws IOException {
+        loadStats();
     }
     public boolean doesSaveExist(){
         return !Files.exists(filePath);
@@ -49,12 +51,17 @@ public class save {
             throw new RuntimeException(e);
         }
     }
+
+    void loadStats() throws IOException {
+        List<String> linesList = Files.readAllLines(filePath);
+        p.name = linesList.get(0);
+        p.gender = Boolean.parseBoolean(linesList.get(1));
+        p.force = Float.parseFloat(linesList.get(2));
+        p.charisma =Float.parseFloat(linesList.get(3));
+    }
     static void createLines(Path filePath, int numberOfLines) throws IOException {
         // Write the lines to the file
         Files.write(filePath, Collections.nCopies(numberOfLines, ""));
-    }
-    void loadStats(){
-
     }
     void writeToFile(Path filePath, String content, int lineNumber) {
         try {

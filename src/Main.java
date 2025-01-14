@@ -1,4 +1,5 @@
 //o ty huju bobże
+import java.io.IOException;
 import java.nio.file.StandardOpenOption;
 import  java.util.*;
 public class Main {
@@ -17,6 +18,13 @@ public class Main {
             System.out.print(Color.BLUE + "witaj w JUAMP-J");
             System.out.print(Color.BLUE + "Utwóż swoją postać\n"+Color.RESET);
             Player.conf_player(S, Player);
+        }else {
+            try {
+                S.create(Player);
+                S.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
         while(true){
 
