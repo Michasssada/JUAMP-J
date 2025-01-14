@@ -40,13 +40,14 @@ public class save {
 
     }
     void saveStats(){
-        //first line is name second is gender third is force fourth is charisma
+        //first line is name second is gender third is force fourth is charisma fifth is money
         try {
-            createLines(filePath,4);
+            createLines(filePath,5);
             writeToFile(filePathg,p.name,1);
             writeToFile(filePathg,String.valueOf(p.gender),2);
             writeToFile(filePathg,String.valueOf(p.force),3);
             writeToFile(filePathg,String.valueOf(p.charisma),4);
+            writeToFile(filePathg,String.valueOf(p.money),5);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -58,6 +59,7 @@ public class save {
         p.gender = Boolean.parseBoolean(linesList.get(1));
         p.force = Float.parseFloat(linesList.get(2));
         p.charisma =Float.parseFloat(linesList.get(3));
+        p.money =Float.parseFloat(linesList.get(4));
     }
     static void createLines(Path filePath, int numberOfLines) throws IOException {
         // Write the lines to the file
